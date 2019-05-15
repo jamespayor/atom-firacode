@@ -1,16 +1,7 @@
-@root-path: 'atom://firacode/res';
-
-.font-face(@name, @file) {
-  @font-path: '@{root-path}/@{file}';
-  @font-face {
-    font-family: @name;
-    src: url(@font-path);
-  }
-}
-
-.editor-font(@name) {
+.editor-font(@name, @weight) {
   atom-text-editor {
     font-family: @name;
+    font-weight: @weight;
     font-feature-settings: 'liga' off, 'calt' off;
 
     .syntax--comment {
